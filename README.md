@@ -114,7 +114,7 @@ make dmg              # 构建 GUI + DMG 安装包
 ./mac.sh clean        # 清理构建产物
 
 # ── Windows ──
-powershell -File build.ps1     # 构建 GUI
+powershell -File build.ps1     # 构建 GUI（需要修改里面的Inno Setup 路径）
 powershell -File package.ps1   # 打包安装程序（需 Inno Setup）
 ```
 
