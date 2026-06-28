@@ -1,0 +1,75 @@
+# Build artifacts
+/codeseek
+/codeseek-gui
+codeseek.exe
+codeseek-gui.exe
+*.dmg
+build/
+
+# Dependencies
+node_modules/
+
+# Config (contains secrets)
+config.yml
+config.yaml
+.env
+.env.test
+.dev.vars
+
+# Data
+/data/
+/trace/
+logs/
+
+# IDE / editor
+.idea/
+.vscode/
+.DS_Store
+
+# Go
+*.test
+*.syso
+*.rc
+coverage.out
+
+# Wails (generated)
+cmd/codeseek-gui/frontend/bindings/
+cmd/codeseek-gui/codeseek.ico
+# Generated icons
+assets/icon-c-*.png
+assets/icon-app.png
+assets/icon-source-framed.png
+assets/icon-tray*.png
+cmd/codeseek-gui/frontend/src/icon-tray.png
+cmd/codeseek-gui/frontend/src/icon-app.png
+
+# Installer
+dist/
+
+# Config schema dumps
+*.schema.json
+
+# Personal AI assistant files
+.claude/
+.codex/
+.agents/
+.cursor/
+.continue/
+.gemini/
+.aider*
+.roo/
+.mcp.json
+.planning/
+AGENTS.md
+CLAUDE.md
+FakeHome/
+
+
+# Cloudflare
+.wrangler/
+docker-compose.yml
+
+# npm
+bin/
+.cache/
+__pycache__/

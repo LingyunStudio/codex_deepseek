@@ -1,0 +1,33 @@
+services:
+  codeseek:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: codeseek:local
+    container_name: codeseek
+    restart: unless-stopped
+    command:
+      - -config
+      - /config/config.yml
+      - -addr
+      - 0.0.0.0:38440
+    ports:
+      - "127.0.0.1:38440:38440"
+    volumes:
+      - ./config.yml:/config/config.yml:ro
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./trace:/app/trace
+    healthcheck:
+      test:
+        - CMD
+        - /app/codeseek
+        - -config
+        - /config/config.yml
+        - -addr
+        - 0.0.0.0:38440
+        - -print-addr
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s

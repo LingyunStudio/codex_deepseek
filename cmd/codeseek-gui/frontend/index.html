@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeSeek</title>
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="light">
+<div id="app">
+  <aside class="sidebar">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+      <div><h1>CodeSeek</h1><span class="sub">协议转换代理</span></div>
+    </div>
+    <nav>
+      <a href="#" data-view="dashboard" class="active"><svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1"/><rect x="9" y="1" width="6" height="6" rx="1"/><rect x="1" y="9" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>概览</a>
+      <a href="#" data-view="providers"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="2"/><path d="M5 13v3M11 13v3"/></svg>服务商</a>
+      <a href="#" data-view="models"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="1" width="12" height="10" rx="2"/><path d="M6 11l2 4 2-4"/></svg>模型</a>
+      <a href="#" data-view="routes"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 8h12M10 4l4 4-4 4"/></svg>路由</a>
+      <a href="#" data-view="settings"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2"/></svg>设置</a>
+      <a href="#" data-view="logs"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="12" height="12" rx="2"/><path d="M5 6h6M5 9h4"/></svg>日志</a>
+    </nav>
+    <div class="footer">
+      <div class="dot" id="dot"></div>
+      <div style="flex:1"><div class="st" id="stLabel">就绪</div><div class="addr" id="stAddr"></div></div>
+      <button class="srv-btn" id="srvBtn" onclick="toggleServer()">启动</button>
+    </div>
+  </aside>
+  <main id="mainContent">
+    <div class="topbar">
+      <div class="topbar-left">
+        <label>当前模型：</label>
+        <select id="topModel" onchange="changeModel()"></select>
+      </div>
+      <div class="topbar-right">
+        <button class="ico-btn" id="themeBtn" onclick="toggleTheme()" title="切换浅色/深色模式">🌙</button>
+      </div>
+    </div>
+    <div id="viewContainer"></div>
+  </main>
+</div>
+<div id="toasts"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
