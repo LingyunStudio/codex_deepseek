@@ -20,6 +20,7 @@ Remove-Item *.syso -Force -ErrorAction SilentlyContinue
 # Find windres (MinGW/MSYS2/anaconda)
 $windres = Get-Command windres -ErrorAction SilentlyContinue
 if (-not $windres) {
+# 需要修改为自己的路径
     $paths = @("D:\anaconda\Library\mingw-w64\bin\windres.exe", "C:\msys64\mingw64\bin\windres.exe")
     foreach ($p in $paths) { if (Test-Path $p) { $windres = $p; break } }
 }
