@@ -1,6 +1,6 @@
 # CodeSeek
 
-让 [Codex CLI](https://github.com/anthropics/codex) 使用 DeepSeek 模型的协议转换代理。
+让 [Codex CLI](https://github.com/anthropics/codex) / App使用 DeepSeek 模型的协议转换代理。
 
 **工作原理：** CodeSeek 在本地启动一个 HTTP 服务（`127.0.0.1:38440`），将 Codex 发出的 OpenAI Responses API 请求转换为 Anthropic Messages API 格式，转发到 DeepSeek，返回响应时再转换回 OpenAI 格式。带桌面 GUI 管理界面。
 
